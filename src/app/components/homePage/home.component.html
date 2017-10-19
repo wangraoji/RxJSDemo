@@ -1,0 +1,116 @@
+<div>
+    简介：<br> RxJS是一种针对异步数据流编程工具，或者叫响应式扩展编程；
+    <br> 可不管如何解释RxJS其目标就是异步编程，Angular引入RxJS为了就是让异步可控、更简单。
+    <br>
+    <br>
+    <table class="tab">
+        <tr>
+            <td>Observable可观察对象：</td>
+            <td>被观察者，表示一个可调用的未来值或者事件集合</td>
+        </tr>
+        <tr>
+            <td>Observer观察者：</td>
+            <td>一个函数的集合，它知道怎么去监听Observable发送的值</td>
+        </tr>
+        <tr>
+            <td>Subscription订阅者：</td>
+            <td>表示一个可观察对象的执行，主要用于取消执行</td>
+        </tr>
+        <tr>
+            <td>Operators操作符：</td>
+            <td>纯粹的函数，使得以函数编程的方式处理集合（个人理解为链式编程），如：map,fiter,contact,flatmap等~</td>
+        </tr>
+        <tr>
+            <td>Subject主题：</td>
+            <td>等同于一个事件驱动器，是一个将值或者事件广播到多个观察者的唯一途径</td>
+        </tr>
+        <tr>
+            <td>Schedulers调度者：</td>
+            <td>用来控制并发，当计算发生的时候允许我们协调，比如 setTiomeout , requestAnimationFrame</td>
+        </tr>
+    </table>
+
+</div>
+
+<br>
+<hr>
+<br>
+
+<p>简单演示观察者模式：</p>
+<div class="dome">
+    <div class="houseBox">
+        <div class="house">微信公众号</div>
+        <i>=></i>
+        <div class="text">Observable(可观察对象)</div>
+        <div class="event">
+            文章标题： <input type="text" [(ngModel)]="inputBtText"> 
+        </div>
+        <div class="push">
+            <button class="pushFn" (click)="toPush()">推送</button>
+        </div>
+    </div>
+    <div class="user1">
+        <div class="house">用户1</div>
+        <i>=></i>
+        <div class="text">Observr(观察者)</div>
+        <div class="event">
+            收到推广文章：<input type="text" [(ngModel)]="user1AttentionMes" readonly> 
+        </div>
+        <div class="push">
+            做出反应(订阅subscribe)：<br>
+            <button class="user1Yes" (click)="user1Yes()">接收</button>
+            <button class="user1No" (click)="user1No()">拒绝</button>
+        </div> 
+        <p class="shuchu">处理结果：<span>{{ user1Mes }}</span></p>
+    </div>
+    <div class="user2">
+        <div class="house">用户2</div>
+        <i>=></i>
+        <div class="text">Observr(观察者)</div>
+        <div class="event">
+            收到推广文章：<input type="text" [(ngModel)]="user2AttentionMes" readonly> 
+        </div>
+        <div class="push">
+            做出反应(订阅subscribe)：<br>
+            <button class="user2Yes" (click)="user2Yes()">接收</button>
+            <button class="user2No" (click)="user2No()">拒绝</button>
+        </div> 
+        <p class="shuchu">处理结果：<span>{{ user2Mes }}</span></p>
+    </div>
+    <div class="user3">
+        <div class="house">用户3</div>
+        <i>=></i>
+        <div class="text">Observr(观察者)</div>
+        <div class="event">
+            收到推广文章：<input type="text" [(ngModel)]="user3AttentionMes" readonly> 
+        </div>
+        <div class="push">
+            做出反应(订阅subscribe)：<br>
+            <button class="user3Yes" (click)="user3Yes()">接收</button>
+            <button class="user3No" (click)="user3No()">拒绝</button>
+        </div> 
+        <p class="shuchu">处理结果：<span>{{ user3Mes }}</span></p>
+    </div>
+    <img src="assets/img/111.png">
+    <div class="zw">1</div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="observable">
+    可观察者：<input type="text">
+</div>
+<div class="consoleBox">
+    <div>
+        显示当前输入的值：
+        <div class="nextBox">
+            {{ conCont }}
+        </div>
+    </div>
+</div> -->

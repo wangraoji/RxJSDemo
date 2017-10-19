@@ -1,0 +1,40 @@
+<h4>
+    push推送
+</h4>
+<div class="cont">
+    <p>
+        Promise是当今JS最常见的 Push(推) 体系， 一个 promise(数据的生产者) 发送一个 resolved value(成功状态的值) 来注册一个回调函数(数据调用者)，但是不同于函数的地方是： promise 决定何时数据才被推送到这个回调函数。
+    </p>
+    <br>
+    <p>
+        RxJS引入了 Observables(可观察对象) ，这是一个全新的 push(推) 体系。一个可观察者对象是一个产生多值的生产者， 并 ‘推送’ 给 Observer(观察者)。
+    </p>
+    <br>
+    <ul>
+        <li>Function：只有在调用时惰性的计算后同步的返回一个值</li>
+        <li>Promise:  是一个可能(也可能不)返回一个单值的计算</li>
+        <li>Observables：是一个从它被调用开始，可异步或同步返回零到多个的惰性执行运算</li>
+    </ul>
+    <br>
+    <div>
+        <p>下面有这么一段代码：</p>
+        <pre>
+            {{ str1 }}
+        </pre>
+        <p>没有任何毛病，但是假设在 return 'end' 后面再添加一个 return 'restart'显然后面的是不会执行的</p>
+        <br>
+        <p>但是如果是使用可观察者，他可以返回任意零到多个值：</p>
+        <pre>
+            {{ str2 }}
+        </pre>
+        <br>
+        <p>一些人认为可观察对象是异步的，其实这并不准确，它是可同步也可异步的：</p>
+        <pre>
+            {{ str3 }}
+        </pre>
+        <br>
+        <p>总结：<br> 
+            Fun.call() 意味着同步给我一个值。 <br>
+            observer.subscribe() 意味着给我任意多个值，无论同步或异步。</p>
+    </div>
+</div>

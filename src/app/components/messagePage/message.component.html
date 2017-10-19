@@ -1,0 +1,52 @@
+<div>
+    我们在写一个Service用于数据传递时，总是使用 new Subject。
+    <br>
+    <br>
+    <pre>
+        {{ servieCode }}
+    </pre>
+</div>
+<br>
+<p>当A组件需要向B组件传递数据时，我们可以在A组件中使用 send()</p>
+<p>而B组件只需要订阅内容就行。<a>查看演示</a></p>
+<br>
+<p>组件A： 发送消息</p>
+<div class="aBox">
+    <div>
+        <A1></A1>
+    </div>
+</div>
+<br>
+<p>组件B： 接收消息</p>
+<div class="bBox">
+    <div>
+        <B1></B1>
+    </div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<div class="cont">
+    <p>这个消息系统我是用的一个叫 Subject(主题)的东西。</p>
+    <p>那么什么是 Subject(主题)呢？它是允许值被多播到多个观察者的一种特殊Observable(可观察对象)，然而
+    纯粹的Observable(可观察对象)是单播的（每一个订阅的观察者拥有单独的可观察对象的执行）。
+    </p>
+    <br>
+    <p>下面我们看段代码：</p>
+    <pre>{{ str1 }}</pre>
+    <br>
+    <p>来个直观的操作：</p>
+    <br>
+    <div class="yanshi1">
+        <span>创建一个可观察对象：房价；价格变动：</span><button (click)="bgFn()">变更</button>
+        <span class="gcB">中介B：{{ zhongJieB }}</span>
+        <span class="gcA">中介A：{{ zhongJieA }}</span>
+    </div>
+    <br>
+    <p>由于Subject(主题)也是一个观察者，那么它也可以当做一个 observable.subscribe() 的参数来用：</p>
+    <pre>
+        {{ str2 }}
+    </pre>
+</div>

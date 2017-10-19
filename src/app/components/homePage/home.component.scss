@@ -1,0 +1,124 @@
+.observable {
+    margin:  10px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.nextBox,.errorBox,.completeBox {
+    border: 1px solid #c0c0c0;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+}
+
+.tab {
+    td {
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
+.dome {
+    font-size: 14px;
+    position: relative;
+    div {
+        position: absolute;
+    }
+    .houseBox ,.user1 , .user2 , .user3{
+        width: 210px;
+        height: 175px;
+        border: 1px solid #c0c0c0;
+        top: 185px;
+        .house {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid red;
+            border-radius: 50%;
+            left: calc( 50% - 50px);
+            top: 10px;
+            color: red;
+            font-weight: bold;
+        }
+        i {
+            font-size: 16px;
+            position: absolute;
+            transform:rotate(90deg);
+            top: 65px;
+            left: 95px;
+        }
+        .text {
+            width: 100%;
+            text-align: center;
+            top: 90px;
+        }
+        .event {
+            top: 120px;
+            padding-left: 20px;
+            input {
+                width: 100px;
+                outline: none;
+            }
+        }
+        .push {
+            width: 100%;
+            text-align: center;
+            top: 145px;
+            button {
+                padding: 0 5px;
+            }
+        }
+    }
+    .user1 , .user2 , .user3{
+        width: 250px;
+        height: 210px;
+        right: 100px;
+        top: 0;
+        .house {
+            width: 50px;
+            height: 50px;
+            left: calc( 50% - 25px);
+        }
+        .event {
+            // padding-left:0; 
+            text-align: center;
+        }
+        i {
+            left: 117px;
+        }
+        .push {
+            top: 145px;
+        }
+        .shuchu {
+            height: 20px;
+            line-height: 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding-left: 10px;
+            span {
+                padding-left: 10px;
+            }
+        }
+    }
+
+    .user2 {
+        top: 220px;
+    }
+    .user3 {
+        top: 450px;
+    }
+    img {
+        position: absolute;
+        width: 450px;
+        top: 70px;
+        left: 230px;
+    }
+    .zw {
+        height: 10px;
+        color: #fff;
+        top: 660px;
+    }
+}
+

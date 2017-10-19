@@ -1,0 +1,33 @@
+.aBox,.bBox {
+    height: 50px;
+    line-height: 50px;
+}
+
+.bBox {
+    border: 1px solid #c0c0c0;
+}
+
+pre {
+    background: rgb(243,243,243);
+}
+
+.cont {
+    font-size: 14px;
+}
+
+.yanshi1 {
+    border: 1px solid #c0c0c0;
+    height: 50px;
+    line-height: 50px;
+    button {
+        padding: 0 5px;
+    }
+    .gcA {
+        float: right;
+        margin-right: 150px;
+    }
+    .gcB {
+        float: right;
+        margin-right: 150px;
+    }
+}

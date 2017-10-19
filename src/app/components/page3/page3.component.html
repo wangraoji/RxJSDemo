@@ -1,0 +1,62 @@
+<p>创建数据流：</p>
+<br>
+<ul>
+    <li>单值：of, empty, never</li>
+    <li>多值：from</li>
+    <li>定时：interval, timer</li>
+    <li>从事件创建：fromEvent</li>
+    <li>从Promise创建：fromPromise</li>
+    <li>自定义创建：create</li>
+</ul>
+<br>
+<p>转换操作：</p>
+<br>
+<ul>
+    <li>改变数据形态：map, mapTo, pluck</li>
+    <li>过滤一些值：filter, skip, first, last, take</li>
+    <li>时间轴上的操作：delay, timeout, throttle, debounce, audit, bufferTime</li>
+    <li>累加：reduce, scan</li>
+    <li>异常处理：throw, catch, retry, finally</li>
+    <li>条件执行：takeUntil, delayWhen, retryWhen, subscribeOn, ObserveOn</li>
+    <li>转接：switch</li>
+</ul>
+<br>
+<p>组合数据流：</p>
+<br>
+<ul>
+    <li>concat，保持原来的序列顺序连接两个数据流</li>
+    <li>merge，合并序列</li>
+    <li>race，预设条件为其中一个数据流完成</li>
+    <li>forkJoin，预设条件为所有数据流都完成</li>
+    <li>zip，取各来源数据流最后一个值合并为对象</li>
+    <li>combineLatest，取各来源数据流最后一个值合并为数组</li>
+</ul>
+<h4>
+    操作符演示
+</h4>
+<div class="jieliufa">
+    <p class="bt">Rxjs节流阀操作符演示：</p>
+    <div class="show">
+        <span>每次点击 + 1，3秒只能点一次！</span>
+        <button class="clickSum">点击</button>
+        <span class="zs">展示：{{ sum }}</span>
+    </div>
+    <pre>
+        {{ jlfCode }}
+        其他操作符：filter , delay , debounceTime , take , takeUntil , distinct,
+        distinctUntilChanged 等等。
+    </pre>
+</div>
+
+<div class="map">
+    <p class="bt">Rxjs Map 操作符演示：</p>
+    <div class="show">
+        <span>点击获取鼠标坐标</span>
+        <button class="clickMap">点击</button>
+        <span class="zs">展示：{{ clientX }}</span>
+    </div>
+    <pre>
+        {{ mapCode }}
+        其他操作符：pluck , pairwise , sample 等等。
+    </pre>
+</div>
